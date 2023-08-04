@@ -1,17 +1,12 @@
-package org.example;
+package dataStructure.example.stackWithLinkedList;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestStackAgain {
-    StackAgain<Integer> stack = new StackAgain<>();
-
-    @AfterEach
-    public void afterEach() {
-        stack = null;
-    }
+public class TestStackWithLinkedList {
+    StackWithLinkedList<Integer> stack = new StackWithLinkedList<>();
 
     @Test
     public void 스택에이즈엠티하면트루() {
@@ -45,9 +40,9 @@ public class TestStackAgain {
         assertEquals(1, stack.peek());
     }
 
-//    @Test
-//    public void 스택에푸쉬를하고사이즈를하면일() {
-//        stack.push(1);
-//        assertEquals(1, stack.size());
-//    }
+    @Test
+    public void 스택에푸쉬를하고사이즈를하면일() {
+        stack.push(1);
+        assertEquals(1, stack.size());
+    }
 }
