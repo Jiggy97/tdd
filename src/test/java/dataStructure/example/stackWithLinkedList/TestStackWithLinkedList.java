@@ -45,4 +45,12 @@ public class TestStackWithLinkedList {
         stack.push(1);
         assertEquals(1, stack.size());
     }
+
+    @Test
+    public void 스택에푸쉬하고사이즈를하기전후픽의값이같은지확인() {
+        stack.push(1);
+        int beforeSize = stack.peek();
+        stack.size();
+        assertEquals(stack.peek(), beforeSize);
+    }
 }

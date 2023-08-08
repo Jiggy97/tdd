@@ -14,7 +14,7 @@ class Node<E> {
 }
 
 public class StackWithLinkedList<E> implements stackMethod<E> {
-    Node<E> top = new Node<>();
+    Node<E> top;
 
     @Override
     public boolean isEmpty() {
@@ -45,11 +45,14 @@ public class StackWithLinkedList<E> implements stackMethod<E> {
 
     @Override
     public int size() {
+        Node<E> node = top;
         int count = 0;
-        while(top.link!=null) {
-            top = top.link;
+        while(node!=null) {
+            node = node.link;
+            // 기존 코드에서는 새로운 객체를 통해 top을 참조하지 않고
+            // top을 바로 사용하였다, return 값은 정확하지만 의도것과 다르게 stack을 건드리게 된다.
             count += 1;
         }
-        return count ;
+        return count;
     }
 }
