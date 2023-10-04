@@ -1,4 +1,4 @@
-package dataStructure.example;
+package dataStructure;
 public class Main {
     public static void main(String[] args) {
 

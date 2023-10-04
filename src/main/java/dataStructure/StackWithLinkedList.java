@@ -1,4 +1,4 @@
-package dataStructure.example.stackWithLinkedList;
+package dataStructure;
 
 interface stackMethod<E> {
     boolean isEmpty();
@@ -6,11 +6,6 @@ interface stackMethod<E> {
     E pop();
     E peek();
     int size();
-}
-
-class Node<E> {
-    E data;
-    Node<E> link;
 }
 
 public class StackWithLinkedList<E> implements stackMethod<E> {
